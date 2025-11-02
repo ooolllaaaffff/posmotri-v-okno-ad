@@ -37,6 +37,16 @@ ol {
   list-style: none;
 }
 
+.visually-hidden {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
 /* Кастомный скроллбар */
 .custom-scrollbar::-webkit-scrollbar {
   width: 4px;
@@ -48,4 +58,295 @@ ol {
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
   background-color: #D9D9D9;
+}
+
+/* Добавленные стили */
+.page {
+  padding-top: 133px;
+  padding-bottom: 133px;
+}
+
+.content {
+  display: flex;
+  align-items: end;
+  gap: 30px;
+
+  width: 1140px;
+  height: 534px;
+}
+
+.search-form {
+  display: flex;
+  justify-content: space-between;
+}
+
+.content__list-container {
+  height: 298px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+
+  position: relative;
+}
+
+.content__list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.content__details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  height: 534px;
+  width: 390px;
+}
+
+.content__details .title {
+  height: 210px;
+}
+
+.result {
+  height: 456px;
+}
+
+.result__video-container {
+  width: 711px;
+  height: 386px;
+  margin-bottom: 16px;
+
+  position: relative;
+}
+
+.result__video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.content__video-card {
+  display: flex;
+  justify-content: space-between;
+
+  height: 103px;
+}
+
+.content__video-card-thumbnail {
+  width: 194px;
+  max-height: 100%;
+  object-fit: fill;
+}
+
+.content__video-card-description-container {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  width: 196px;
+}
+
+.search-form__fieldset-title {
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  margin-bottom: 5px;
+}
+
+.title {
+  font-family: 'Oswald', sans-serif;
+  font-weight: bold;
+  font-size: 75px;
+  line-height: 94%;
+  text-transform: uppercase;
+}
+
+.content__accent {
+  color: #545050;
+}
+
+.content__card-link {
+  text-decoration: none;
+  color: white;
+}
+
+.content__video-card-title {
+  font-family: 'Oswald', sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+  text-transform: uppercase;
+
+  width: 196px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.content__video-card-description {
+  width: 196px;
+  height: 67px;
+  line-height: 16.2px;
+  overflow: hidden;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+
+  line-clamp: 4;
+  box-orient: vertical;
+}
+
+.search-form__checkbox-list {
+  display: flex;
+  gap: 15px;
+}
+
+fieldset {
+  border: none;
+}
+
+.search-form__label {
+  display: flex;
+  width: fit-content;
+}
+
+input {
+  line-height: 22px;
+  color: white;
+  border: white solid 1px;
+  background-color: transparent;
+  width: 225px;
+  
+  border-left: none;
+  border-right: none;
+
+  appearance: none;
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+input:active {
+  border-left: white solid 1px;
+  border-right: white solid 1px;
+}
+
+input:focus {
+  outline: none;
+}
+
+.search-form fieldset:first-child {
+  width: 225px;
+}
+
+.search-form fieldset:nth-child(2) {
+  width: 212px;
+}
+
+.search-form__label:has(:focus-visible) {
+  outline: white solid 1px;
+  outline-offset: 1px;
+}
+
+.search-form__pseudo-checkbox {
+  width: 19px;
+  height: 19px;
+
+  border: white solid 1px;
+  background-color: transparent;
+
+  display: inline-flex;
+  align-self: center;
+  align-items: center;
+  justify-content: center;
+  margin-right: 5px;
+}
+
+.search-form__pseudo-checkbox::after {
+  content: '';
+
+  width: 15px;
+  height: 15px;
+
+  background-color: white;
+  opacity: 0;
+}
+
+.search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
+  opacity: 1;
+}
+
+.search-form__checkbox-list .search-form__label:hover {
+  text-decoration: underline;
+
+  cursor: pointer;
+}
+
+.button {
+  color: white;
+  background-color: transparent;
+  border: white solid 1px;
+
+  font-weight: bold;
+}
+
+.button:active {
+  background-color: #545050;
+}
+
+.button:hover {
+  text-decoration: underline;
+
+  cursor: pointer;
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button:focus-visible {
+  outline: white solid 1px;
+  outline-offset: 1px;
+}
+
+.search-form__submit-button {
+  width: 194px;
+  height: 34px;
+
+  align-self: flex-end;
+}
+
+.more-button {
+  width: 100%;
+  height: 34px;
+
+  margin-top: 30px;
+}
+
+.content__video-card {
+  padding-left: 3px;
+}
+
+.content__list-item:active {
+  background-color: #545050;
+}
+
+.content__card-link_current .content__video-card {
+  background-color: #545050;
+}
+
+.content__video-card:hover {
+  text-decoration: underline;
+
+  cursor: pointer;
+}
+
+.content__list-item a:focus {
+  outline: none;
+}
+
+.content__list-item:focus-within {
+  outline: white solid 2px;
+  outline-offset: -2px;
 }
