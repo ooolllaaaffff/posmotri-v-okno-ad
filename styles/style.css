@@ -106,8 +106,7 @@ ol {
   position: relative
 }
 
-.content__details {
-  flex: 1;
+.content__details { 
   grid-area: details;
   display: flex;
   flex-direction: column;
@@ -119,10 +118,7 @@ ol {
   height: 386px;
   position: relative;
   overflow: hidden;
-  inline-size: 100%;
-  width: inherit;
-  object-fit: cover;
-  object-position: center;
+  inline-size: 100%; 
 }
 
 .result__video {
